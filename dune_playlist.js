@@ -55,7 +55,7 @@
 
     Lampa.SettingsApi.addParam({
         component: 'dune_hd',
-        param: { name: KEY_IP, type: 'input', default: '' },
+        param: { name: KEY_IP, type: 'input', values: '', default: '' },
         field: { name: 'IP адрес Dune', description: 'Например 192.168.1.50' }
     });
 })();
