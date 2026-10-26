@@ -18,8 +18,8 @@
         var hash = getHash(url);
         if (!hash) return false;
 
-        var playlist = origin + '/playlist?hash=' + hash;
-        var cmd = 'http://' + ip + '/cgi-bin/do?cmd=start_playlist_playback&media_url=' +
+        var playlist = origin + '/stream/playlist.m3u?link=' + hash + '&m3u';
+        var cmd = 'http://' + ip + '/cgi-bin/do?cmd=launch_media_url&media_url=' +
             encodeURIComponent(playlist);
 
         fetch(cmd, { mode: 'no-cors' })
